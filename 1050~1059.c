@@ -3,9 +3,6 @@
 
 int sumofEvenandMaxIdx(int arr[], int n) {
 // 이 부분에 코드를 작성하시오. ===========================
-
-
-    
     int cnt=0;
     int max=-100;
     int maxindex=0;
@@ -20,8 +17,6 @@ int sumofEvenandMaxIdx(int arr[], int n) {
     }
     cnt=cnt+maxindex;
     return cnt;
-
-
 // =============================================
 }
 
@@ -54,7 +49,6 @@ int main() {
 int arr[10];
  
 // 이 부분에 코드를 작성하시오. ===========================
- 
     for(int i=0;i<10;i++){
         scanf("%d",&arr[i]);
     }
@@ -62,9 +56,6 @@ int arr[10];
     for(int i=0;i<10;i++){
         if(arr[i]<0)arr[i]=0;
     }
- 
- 
- 
 // ==============================================
  
 for (int i = 0; i < 10; i++)
@@ -86,17 +77,11 @@ int main() {
 int arr[10];
 
 // 이 부분에 코드를 작성하시오. ===========================
-
-
-
     for(int i=0;i<10;i++){
         scanf("%d", &arr[i]);
         if(arr[i]>=0)arr[i]=1;
         else arr[i]=0;
     }
-
-
-
 // ==============================================
 
 for (int i = 0; i < 10; i++)
@@ -146,8 +131,6 @@ int main() {
 
 int eseStrlen(char string[]) {
     // 이 부분에 코드를 작성하시오. ==============
- 
-
     int len=0;
     for(int i=0;i<100;i++){
         if(string[i]==0){
@@ -166,9 +149,6 @@ int eseStrlen(char string[]) {
     }
     if(cnt!=0)len=len*cnt;
     return len;
-
-
-
     // ==================================
 }
 

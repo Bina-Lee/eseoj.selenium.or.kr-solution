@@ -3,7 +3,7 @@ Incheon National University
 
 Embedded System Engineering
 
-for C-Programming(2)
+for C-Programming
 
 Online Judge Site
 

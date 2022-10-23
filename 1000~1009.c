@@ -22,10 +22,6 @@ void printCalc(int _input1, int _input2) {
     printf("%d\n",_input1*y2);
     printf("%d\n",_input1*y1);
     printf("%d\n",_input1*_input2);
- 
- 
- 
- 
 // ========================================
 }
  
@@ -97,17 +93,13 @@ int main() {
 void printModifiedData(unsigned int _a, int _N) {
  
 // 이 부분을 작성하라 ==========================
- 
- 
     for(int i=0;i<_N*2;i++){
         _a=_a/16;
     }
     for(int i=0;i<_N*2;i++){
         _a=_a*16;
     }
-    printf("%08X",_a);
- 
- 
+    printf("%08X",_a); 
 // =============================================
 }
  

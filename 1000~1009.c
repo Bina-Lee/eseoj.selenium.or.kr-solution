@@ -13,6 +13,32 @@ int main() {
 ////////////////////////////////////////////////////
 
 //1001
+#include <stdio.h>
+ 
+void printCalc(int _input1, int _input2) {
+// 이 부분을 구현하라 =====================
+    int y1=_input2/10;
+    int y2=_input2%10;
+    printf("%d\n",_input1*y2);
+    printf("%d\n",_input1*y1);
+    printf("%d\n",_input1*_input2);
+ 
+ 
+ 
+ 
+// ========================================
+}
+ 
+ 
+int main() {
+    int input1, input2;
+    scanf("%d %d", &input1, &input2);
+ 
+    printCalc(input1, input2);
+ 
+    return 0;
+}
+
 
 ////////////////////////////////////////////////////
 
@@ -66,6 +92,38 @@ int main() {
 ////////////////////////////////////////////////////
 
 //1004
+#include <stdio.h>
+ 
+void printModifiedData(unsigned int _a, int _N) {
+ 
+// 이 부분을 작성하라 ==========================
+ 
+ 
+    for(int i=0;i<_N*2;i++){
+        _a=_a/16;
+    }
+    for(int i=0;i<_N*2;i++){
+        _a=_a*16;
+    }
+    printf("%08X",_a);
+ 
+ 
+// =============================================
+}
+ 
+int main()
+{
+    unsigned int a = 0X12345678; //예시
+    int N = 0;
+ 
+    scanf("%X", &a); // 16진수 형태의 숫자 입력
+    scanf("%d", &N); // 1~4의 숫자
+ 
+    printModifiedData(a, N);
+ 
+    return 0;
+}
+
 
 ////////////////////////////////////////////////////
 

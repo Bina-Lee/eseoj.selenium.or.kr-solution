@@ -37,8 +37,6 @@ int main(){
 int sub(int x,int y){
     return x-y;
 }
- 
- 
 // ===============================================
  
  
@@ -62,8 +60,6 @@ int main() {
  
 int diffMaxMin(int arr[], int n) {
 // 이 부분에 코드를 작성하시오. ===========================
- 
-     
     int min=0,max=0,minvalue=100000,maxvalue=-100000;
     for(int i=0;i<n;i++){
         if(arr[i]>maxvalue){
@@ -80,9 +76,6 @@ int diffMaxMin(int arr[], int n) {
     int res=max-min;
     if(res<0)res=-res;
     return res;
- 
- 
- 
 // ========================================================
 }
  

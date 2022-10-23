@@ -176,3 +176,29 @@ int main() {
 ////////////////////////////////////////////////////
 
 //1069
+#include <stdio.h>
+#define MAX 100
+ 
+ 
+int main()
+ {
+ 
+    char phone[MAX];
+    scanf("%s", phone);
+ 
+    // ================================================
+    // 이 부분에 코드를 작성하세요.
+ 
+    for(int i=0;i<MAX;i++){
+        if(phone[i]=='-')phone[i]=' ';
+        else if(phone[i]==0)break;
+        else if(!(phone[i]>='0'&&phone[i]<='9'))phone[i]='0';
+    }
+   
+ 
+    //=================================================
+ 
+    printf("%s", phone);
+ 
+    return 0;
+}

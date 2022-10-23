@@ -1,4 +1,5 @@
-//1039
+
+//////////////////////////////////////////////////////1039
 #include <stdio.h>
 
 void printMBTI(unsigned char _data){

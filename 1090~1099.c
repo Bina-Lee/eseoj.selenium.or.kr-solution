@@ -11,4 +11,3 @@ int main() {
         else if (text[i] == 0)break;
     }
     printf("%s", text);
-}

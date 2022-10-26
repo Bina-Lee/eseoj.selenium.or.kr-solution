@@ -1,4 +1,4 @@
-//1090 example
+//1090
 #include <stdio.h> 
 
 

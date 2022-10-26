@@ -4,7 +4,7 @@
 int sumofEvenandMaxIdx(int arr[], int n) {
 // 이 부분에 코드를 작성하시오. ===========================
     int cnt=0;
-    int max=-100;
+    int max=-1;
     int maxindex=0;
     for(int i=0;i<n;i++){
         if(arr[i]%2==0){

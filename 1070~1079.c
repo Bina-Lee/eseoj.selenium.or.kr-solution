@@ -209,6 +209,35 @@ int main() {
 
 ////////////////////////////////////////////////////
 
+//1077
+#include <stdio.h>
+
+void MIDTERM(char* text) {
+    for (int i = 0; i < 101; i++) {
+        if (*(text + i) == '@') {
+            for (int j = 100; j >= i; j--) {
+                *(text + j) = *(text + j - 1);
+            }
+            *(text + i) = 'A';
+            *(text + i + 1) = 'T';
+        }
+    }
+}
+
+int main()
+{
+    char text[101];
+    scanf("%s", text); // 문자열 입력 받아 저장 (최대 50자)
+
+    MIDTERM(text); // 문자열에 조건에 맞게 조작을 가함
+
+    printf("%s", text); // 변형된 문자열 출력
+
+    return 0;
+}
+
+////////////////////////////////////////////////////
+
 //1078
 #include<stdio.h>
 int main() {

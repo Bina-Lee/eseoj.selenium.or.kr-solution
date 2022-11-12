@@ -66,6 +66,43 @@ int main(void)
 
 ////////////////////////////////////////////////////
 
+//1092
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int cmp(char src[][100]){
+    int check=1;
+    for(int i=0;i<100;i++){
+        if(src[0][i]==0&&src[1][i]==0)break;
+        else if(src[0][i]==0||src[1][i]==0){check=-1;break;}
+        else if(src[0][i]>='a'&&src[0][i]<='z'){
+            if(src[1][i]>='A'&&src[1][i]<='Z')src[1][i]=src[1][i]+32;
+            if(src[0][i]!=src[1][i]){check=-1;break;}
+        }
+        else if(src[0][i]>='A'&&src[0][i]<='Z'){
+            if(src[1][i]>='a'&&src[1][i]<='z')src[1][i]=src[1][i]-32;
+            if(src[0][i]!=src[1][i]){check=-1;break;}
+        }
+        else if(src[0][i]!=src[1][i]){check=-1;break;}
+    }
+    return check;
+}
+
+int main(void)
+{
+    char arr[2][100];
+
+    scanf("%s", arr[0]);
+    scanf("%s", arr[1]);
+
+
+    printf("%d", cmp(arr));
+
+    return 0;
+}
+
+////////////////////////////////////////////////////
+
 //1093
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
@@ -74,6 +111,34 @@ int main(void)
 char** ese(char** _p) {
     _p = (char**)malloc(sizeof(char*) * 3);
     for (int i = 0; i < 3; i++)_p[i] = (char*)malloc(sizeof(char) * 30);
+    for (int i = 0; i < 3; i++)scanf("%s", _p[i]);
+    return _p;
+}
+
+int main(void)
+{
+    char** p = NULL;
+
+    p = ese(p);
+
+    printf("%s\n%s\n%s", *p, *(p + 1), *(p + 2));
+
+    for (int i = 0; i < 3; i++) free(p[i]);
+    free(p);
+
+    return 0;
+}
+
+////////////////////////////////////////////////////
+
+//1094
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+char** ese(char** _p) {
+    _p = (char**)malloc(sizeof(char*) * 3);
+    for (int i = 0; i < 3; i++)_p[i] = (char*)malloc(sizeof(char) * 50);
     for (int i = 0; i < 3; i++)scanf("%s", _p[i]);
     return _p;
 }
@@ -164,6 +229,64 @@ void makeDot(unsigned int data, char* _binary) {
         if (data >> i & 0x01)*(_binary + 31 - i) = '*';
         else *(_binary + 31 - i) = '-';
     }
+}
+
+int main(void)
+{
+    unsigned int data;
+    char binary[33];
+    scanf("%u", &data);
+
+    makeDot(data, binary);
+    binary[32] = NULL;
+
+    printf("%s", binary);
+    return 0;
+}
+
+////////////////////////////////////////////////////
+
+//1098
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int  isCharIncluded(char* str, char key){
+    for(int i=0;i<100;i++){
+        if(*(str+i)==0)return 0;
+        else if(*(str+i)==key)return 1;
+    }
+    return 0;
+}
+
+int main(void)
+{
+    char str[100];
+    char key;
+
+    scanf("%c", &key);
+    scanf("%s", str);
+
+    printf("%d", isCharIncluded(str, key));
+
+}
+
+////////////////////////////////////////////////////
+
+//1099
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+
+void makeDot(unsigned int data, char* _binary) {
+    int cnt=0;
+    for (int i = 31; i >= 0; i--) {
+        if (data >> i & 0x01){
+            *(_binary + 31 - i) = '@';
+            cnt++;
+        }
+        else *(_binary + 31 - i) = '!';
+    }
+    printf("%d\n",cnt);
 }
 
 int main(void)
